@@ -5,17 +5,17 @@
   
 
   
-  <title>Hexo安装教程 | Hexo</title>
+  <title>docker部署apache+php | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="#安装node.jswww.cnblogs.com&#x2F;liuqiyun&#x2F;p&#x2F;8133904.htmlnode.js安装教程 #安装githttps:&#x2F;&#x2F;blog.csdn.net&#x2F;weixin_45783947&#x2F;article&#x2F;details&#x2F;105580604git安装教程 #查看相关软件node -vnpm -vgit –version 生成ssh:  ssh-keygen -t rsa -C">
+  <meta name="description" content="#1、拉取镜像docker pull php:7.0-apache#2、创建src目录，存放web目录mkdir &#x2F;data&#x2F;src#3、创建测试文件vim &#x2F;data&#x2F;src&#x2F;info.php#4、创建容器docker run  -itd -v &#x2F;data&#x2F;src:&#x2F;var&#x2F;www&#x2F;html -p 80:80 php:7.0-apache#5、测试访问http:&#x2F;&#x2F;192.168.3.5&#x2F;inf">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo安装教程">
-<meta property="og:url" content="http://example.com/2021/12/28/Hexo%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/index.html">
+<meta property="og:title" content="docker部署apache+php">
+<meta property="og:url" content="http://example.com/2021/12/28/docker%E9%83%A8%E7%BD%B2apache+php/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="#安装node.jswww.cnblogs.com&#x2F;liuqiyun&#x2F;p&#x2F;8133904.htmlnode.js安装教程 #安装githttps:&#x2F;&#x2F;blog.csdn.net&#x2F;weixin_45783947&#x2F;article&#x2F;details&#x2F;105580604git安装教程 #查看相关软件node -vnpm -vgit –version 生成ssh:  ssh-keygen -t rsa -C">
+<meta property="og:description" content="#1、拉取镜像docker pull php:7.0-apache#2、创建src目录，存放web目录mkdir &#x2F;data&#x2F;src#3、创建测试文件vim &#x2F;data&#x2F;src&#x2F;info.php#4、创建容器docker run  -itd -v &#x2F;data&#x2F;src:&#x2F;var&#x2F;www&#x2F;html -p 80:80 php:7.0-apache#5、测试访问http:&#x2F;&#x2F;192.168.3.5&#x2F;inf">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-12-28T07:17:36.000Z">
-<meta property="article:modified_time" content="2021-12-28T07:18:06.563Z">
+<meta property="article:published_time" content="2021-12-28T07:59:36.000Z">
+<meta property="article:modified_time" content="2021-12-28T07:40:23.461Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -66,10 +66,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-Hexo安装教程" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-docker部署apache+php" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2021/12/28/Hexo%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/" class="article-date">
-  <time datetime="2021-12-28T07:17:36.000Z" itemprop="datePublished">2021-12-28</time>
+    <a href="/2021/12/28/docker%E9%83%A8%E7%BD%B2apache+php/" class="article-date">
+  <time datetime="2021-12-28T07:59:36.000Z" itemprop="datePublished">2021-12-28</time>
 </a>
     
   </div>
@@ -80,7 +80,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Hexo安装教程
+      docker部署apache+php
     </h1>
   
 
@@ -88,22 +88,14 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>#安装node.js<br><a target="_blank" rel="noopener" href="http://www.cnblogs.com/liuqiyun/p/8133904.html">www.cnblogs.com/liuqiyun/p/8133904.html</a><br>node.js安装教程</p>
-<p>#安装git<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_45783947/article/details/105580604">https://blog.csdn.net/weixin_45783947/article/details/105580604</a><br>git安装教程</p>
-<p>#查看相关软件<br>node -v<br>npm -v<br>git –version</p>
-<p>生成ssh:  ssh-keygen -t rsa -C “<a href="mailto:&#x6e;&#105;&#110;&#x67;&#119;&#x65;&#105;&#95;&#x31;&#49;&#50;&#50;&#64;&#x31;&#x36;&#x33;&#46;&#99;&#111;&#109;">&#x6e;&#105;&#110;&#x67;&#119;&#x65;&#105;&#95;&#x31;&#49;&#50;&#50;&#64;&#x31;&#x36;&#x33;&#46;&#99;&#111;&#109;</a>“</p>
-<p>/c/Users/kiro/.ssh/id_rsa<br>用notepad++打开：<br>C:\Users\kiro.ssh\id_rsa.pub<br>复制全部内容<br>github添加ssh_key<br><a target="_blank" rel="noopener" href="https://github.com/settings/keys">https://github.com/settings/keys</a></p>
-<p>测试绑定是否成功：<br>ssh -T <a href="mailto:&#x67;&#x69;&#116;&#64;&#103;&#105;&#116;&#x68;&#x75;&#x62;&#46;&#x63;&#x6f;&#109;">&#x67;&#x69;&#116;&#64;&#103;&#105;&#116;&#x68;&#x75;&#x62;&#46;&#x63;&#x6f;&#109;</a></p>
-<p>安装hexo<br>npm install -g hexo<br>hexo init #初始化hexo<br>hexo g    #生成<br>hexo s    #启动服务<br><a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000</a>    #测试</p>
-<p>修改：_config.yml  文件<br>deploy:<br>  type: ‘git’<br>  repository: ‘<a target="_blank" rel="noopener" href="https://github.com/suker620/suker620.github.io.git&#39;">https://github.com/suker620/suker620.github.io.git&#39;</a><br>  branch: ‘main’</p>
-<p>安装工具：（进入blog文件夹）<br>npm install hexo-deployer-git –save</p>
-<p>Run<br>  git config –global user.email “<a href="mailto:&#121;&#111;&#x75;&#x40;&#101;&#x78;&#97;&#x6d;&#112;&#x6c;&#x65;&#x2e;&#x63;&#x6f;&#x6d;">&#121;&#111;&#x75;&#x40;&#101;&#x78;&#97;&#x6d;&#112;&#x6c;&#x65;&#x2e;&#x63;&#x6f;&#x6d;</a>“<br>  git config –global user.name “Your Name”</p>
-<p>hexo d    #上传至服务器</p>
+        <p>#1、拉取镜像<br>docker pull php:7.0-apache<br>#2、创建src目录，存放web目录<br>mkdir /data/src<br>#3、创建测试文件<br>vim /data/src/info.php<br><?php
+phpinfo();
+?><br>#4、创建容器<br>docker run  -itd -v /data/src:/var/www/html -p 80:80 php:7.0-apache<br>#5、测试访问<br><a target="_blank" rel="noopener" href="http://192.168.3.5/info.php">http://192.168.3.5/info.php</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/12/28/Hexo%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/" data-id="ckxraocy9000068uzf6z4b5j5" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/12/28/docker%E9%83%A8%E7%BD%B2apache+php/" data-id="ckxraocyg000168uz06af6ko1" class="article-share-link">Share</a>
       
       
     </footer>
@@ -112,19 +104,19 @@
     
 <nav id="article-nav">
   
-    <a href="/2021/12/28/%E6%88%91%E7%9A%84%E7%AC%AC%E4%BA%8C%E7%AF%87%E6%96%87%E7%AB%A0/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2021/12/29/markdown%E7%9A%84%E8%AF%AD%E6%B3%95/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          我的第二篇文章
+          markdown的语法
         
       </div>
     </a>
   
   
-    <a href="/2021/12/27/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2021/12/28/%E6%88%91%E7%9A%84%E7%AC%AC%E4%BA%8C%E7%AF%87%E6%96%87%E7%AB%A0/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">我的第一篇文章</div>
+      <div class="article-nav-title">我的第二篇文章</div>
     </a>
   
 </nav>
